@@ -7,6 +7,50 @@
   <title>Friends App</title>
 </head>
 <body>
-  
+  <header class="header">
+    <h1 class="header--title">Friends App</h1>
+  </header>
+  <main class="main">
+    <section class="users-filters">
+      <form class="form">
+        <h3 class="form-header">Search</h2>
+        <div class="form-search">
+          <input class="form-search--input" name="search" type="text" placeholder="Search...">
+        </div>
+        <h3 class="form-header">Sort By</h2>
+        <div class="form-sorting">
+            <select class="form-sorting--select" name="sorting">
+              <option value="default" selected>Default</option> 
+              <option value="age-desc">Age (descending)</option>
+              <option value="age-asc">Age (ascending)</option>
+              <option value="name-desc">Name (descending)</option>
+              <option value="name-asc">Name (ascending)</option>
+            </select>
+        </div>
+        <h3 class="form-header">Gender</h2>
+        <div class="form-filter">
+            <label class="form-filter--item">              
+              Female
+              <input class="form-filter--checkbox" type="radio" name="gender" value="female">
+              <span class="form-filter--checkmark"></span>
+            </label>
+            <label class="form-filter--item">
+              Male
+              <input class="form-filter--checkbox" type="radio" name="gender" value="male">
+              <span class="form-filter--checkmark"></span>
+            </label>
+            <label class="form-filter--item">
+              All
+              <input class="form-filter--checkbox" type="radio" name="gender" value="all">
+              <span class="form-filter--checkmark"></span>
+            </label>
+        </div>
+        <button class="form-button" type="reset">Reset</button>
+      </form>
+    </section>
+    <section class="users-list">
+      
+    </section>
+  </main>
 </body>
 </html>
