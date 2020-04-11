@@ -1,6 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #212b58;
+
   background: #fafafa;
 }
 
@@ -112,6 +113,8 @@ body {
 
   border: 1px solid #e3e9ed;
   border-radius: 5px;
+
+  -webkit-appearance: none;
 }
 
 .form-sorting {
@@ -377,8 +380,10 @@ body {
     margin-bottom: 45px;
   }
   .users-list {
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
     justify-content: space-between;
     width: 605px;
     margin: auto;
@@ -390,8 +395,11 @@ body {
 
 @media (min-width: 1000px) {
   .main {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
     align-items: flex-start;
     width: 945px;
     margin: auto;
@@ -427,6 +435,7 @@ body {
     padding: 55px 0;
   }
   .users-list {
+    -webkit-box-pack: start;
     justify-content: flex-start;
     width: 925px;
   }
@@ -438,5 +447,4 @@ body {
   .user:nth-of-type(3n) {
     margin-right: 0;
   }
-
 }
