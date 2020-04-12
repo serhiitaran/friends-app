@@ -9,7 +9,7 @@ let state = {
   sorting: 'default',
 };
 
-const toDefaultState = () => {
+const resetState = () => {
   state = {
     gender: 'all',
     search: null,
@@ -17,13 +17,13 @@ const toDefaultState = () => {
   };
 };
 
-const formHanler = event => {
-  if (event.type === 'submit') {
+const formHandler = ({ type, target }) => {
+  if (type === 'submit') {
     event.preventDefault();
   }
-  state[event.target.name] = event.target.value;
-  if (event.type === 'reset') {
-    toDefaultState();
+  state[target.name] = target.value;
+  if (type === 'reset') {
+    resetState();
   }
   const filtredUsers = filterUsers(originUsers, state);
   const sortedUsers = sortUsers(filtredUsers, state);
@@ -34,5 +34,5 @@ export default (users, render) => {
   originUsers = users;
   renderUsers = render;
 
-  return formHanler;
+  return formHandler;
 };
