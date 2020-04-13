@@ -5,7 +5,7 @@ import createFormHandler from './form-handler.js';
 const usersContainer = document.querySelector('.users-list');
 const form = document.querySelector('.form');
 const filtersButton = document.querySelector(
-  '.users-filters--button',
+  '.users-filters__button',
 );
 
 const render = users => {
@@ -25,8 +25,8 @@ export const init = async () => {
   form.addEventListener('reset', formHandler);
 
   filtersButton.addEventListener('click', () => {
-    form.classList.toggle('form-open');
-    const filtersButtonText = form.classList.contains('form-open')
+    form.classList.toggle('form--open');
+    const filtersButtonText = form.classList.contains('form--open')
       ? 'Close filters'
       : 'Open filters';
     filtersButton.textContent = filtersButtonText;

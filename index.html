@@ -11,19 +11,19 @@
 </head>
 <body>
   <header class="header">
-    <h1 class="header--title">Friends App</h1>
+    <h1 class="header__title">Friends App</h1>
   </header>
   <main class="main">
     <section class="users-filters">
-      <button class="users-filters--button"> Open filters</button>
+      <button class="users-filters__button"> Open filters</button>
       <form class="form">
-        <h3 class="form-header">Search</h2>
-        <div class="form-search">
-          <input class="form-search--input" name="search" type="text" placeholder="Search...">
+        <h3 class="form__header">Search</h2>
+        <div class="search">
+          <input class="search__input" name="search" type="text" placeholder="Search...">
         </div>
-        <h3 class="form-header">Sort By</h2>
-        <div class="form-sorting">
-            <select class="form-sorting--select" name="sorting">
+        <h3 class="form__header">Sort By</h2>
+        <div class="sorting">
+            <select class="sorting__select" name="sorting">
               <option value="default" selected>Default</option> 
               <option value="age-desc">Age (descending)</option>
               <option value="age-asc">Age (ascending)</option>
@@ -31,25 +31,25 @@
               <option value="name-asc">Name (ascending)</option>
             </select>
         </div>
-        <h3 class="form-header">Gender</h2>
-        <div class="form-filter">
-            <label class="form-filter--item">              
+        <h3 class="form__header">Gender</h2>
+        <div class="filter">
+            <label class="filter__item">              
               Female
-              <input class="form-filter--checkbox" type="radio" name="gender" value="female">
-              <span class="form-filter--checkmark"></span>
+              <input class="filter__checkbox" type="radio" name="gender" value="female">
+              <span class="filter__checkmark"></span>
             </label>
-            <label class="form-filter--item">
+            <label class="filter__item">
               Male
-              <input class="form-filter--checkbox" type="radio" name="gender" value="male">
-              <span class="form-filter--checkmark"></span>
+              <input class="filter__checkbox" type="radio" name="gender" value="male">
+              <span class="filter__checkmark"></span>
             </label>
-            <label class="form-filter--item">
+            <label class="filter__item">
               All
-              <input class="form-filter--checkbox" type="radio" name="gender" value="all">
-              <span class="form-filter--checkmark"></span>
+              <input class="filter__checkbox" type="radio" name="gender" value="all">
+              <span class="filter__checkmark"></span>
             </label>
         </div>
-        <button class="form-button" type="reset">Reset</button>
+        <button class="form__button" type="reset">Reset</button>
       </form>
     </section>
     <section class="users-list">

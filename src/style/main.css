@@ -16,7 +16,7 @@ body {
   background: #ffffff;
   border-bottom: 1px solid #e3e9ed;
 }
-.header--title {
+.header__title {
   margin: auto;
 
   font-size: 24px;
@@ -32,7 +32,7 @@ body {
   margin-bottom: 45px;
 }
 
-.users-filters--button {
+.users-filters__button {
   position: relative;
 
   display: block;
@@ -52,7 +52,7 @@ body {
   border: 1px solid #e3e9ed;
   border-radius: 5px;
 }
-.users-filters--button:after {
+.users-filters__button:after {
   content: "";
   position: absolute;
   top: 6.5px;
@@ -72,23 +72,23 @@ body {
   display: none;
 }
 
-.form-open {
+.form--open {
   display: block;
   margin-top: 35px;
 }
 
-.form-header {
+.form__header {
   font-size: 17px;
   letter-spacing: 1px;
 }
 
-.form-search {
+.search {
   position: relative;
 
   margin-bottom: 30px;
 }
 
-.form-search:after {
+.search:after {
   content: "";
   position: absolute;
   top: 15px;
@@ -102,7 +102,7 @@ body {
   background-size: cover;
 }
 
-.form-search--input {
+.search__input {
   box-sizing: border-box;
   width: 100%;
   height: 45px;
@@ -120,13 +120,13 @@ body {
   -webkit-appearance: none;
 }
 
-.form-sorting {
+.sorting {
   position: relative;
 
   margin-bottom: 30px;
 }
 
-.form-sorting:after {
+.sorting:after {
   content: "";
   position: absolute;
   top: 15.5px;
@@ -140,7 +140,7 @@ body {
   background-size: cover;
 }
 
-.form-sorting--select {
+.sorting__select {
   width: 100%;
   height: 45px;
   padding: 0 15px;
@@ -159,7 +159,7 @@ body {
           appearance: none;
 }
 
-.form-filter {
+.filter {
   margin-bottom: 30px;
   padding: 25px 20px;
 
@@ -168,7 +168,7 @@ body {
   border-radius: 5px;
 }
 
-.form-filter--item {
+.filter__item {
   position: relative;
 
   display: block;
@@ -180,11 +180,11 @@ body {
   font-weight: 500;
   font-size: 14px;
 }
-.form-filter--item:nth-of-type(3) {
+.filter__item:nth-of-type(3) {
   margin-bottom: 0;
 }
 
-.form-filter--checkbox {
+.filter__checkbox {
   position: absolute;
 
   width: 0;
@@ -194,7 +194,7 @@ body {
   opacity: 0;
 }
 
-.form-filter--checkmark {
+.filter__checkmark {
   position: absolute;
   top: 12px;
   left: 0;
@@ -206,7 +206,7 @@ body {
   border: 1px solid #e3e9ed;
   border-radius: 50%;
 }
-.form-filter--checkbox:checked ~ .form-filter--checkmark:after {
+.filter__checkbox:checked ~ .filter__checkmark:after {
   content: "";
   position: absolute;
   top: 3px;
@@ -221,7 +221,7 @@ body {
   border-radius: 50%;
 }
 
-.form-button {
+.form__button {
   display: block;
   height: 40px;
   padding: 0 25px;
@@ -236,17 +236,17 @@ body {
   border-radius: 5px;
 }
 
-.form-search--input:focus,
-.form-sorting--select:focus,
-.form-button:focus,
-.users-filters--button:focus {
+.search__input:focus,
+.sorting__select:focus,
+.form__button:focus,
+.users-filters__button:focus {
   outline: 2px solid #212b58;
 }
 
-.form-sorting--select:hover,
-.form-filter--item,
-.form-button:hover,
-.users-filters--button:hover {
+.sorting__select:hover,
+.filter__item:hover,
+.form__button:hover,
+.users-filters__button:hover {
   cursor: pointer;
 }
 
@@ -266,14 +266,6 @@ body {
   border-radius: 10px;
 }
 
-
-.user-image {
-  position: relative;
-  z-index: 100;
-
-  border-radius: 50%;
-}
-
 .user:after {
   content: "";
   position: absolute;
@@ -287,7 +279,14 @@ body {
   border-radius: 10px 10px 0 0;
 }
 
-.user-name {
+.user__image {
+  position: relative;
+  z-index: 100;
+
+  border-radius: 50%;
+}
+
+.user__name {
   position: relative;
   z-index: 100;
 }
@@ -307,18 +306,18 @@ body {
   border-bottom: 1px solid #e3e9ed;
 }
 
-.user-info--title {
+.user-info__title {
   font-size: 13px;
 }
 
-.user-info--value {
+.user-info__value {
   font-weight: bold;
   font-size: 14px;
 }
 
-.user-email,
-.user-location,
-.user-phone {
+.user__email,
+.user__location,
+.user__phone {
   position: relative;
 
   margin-top: 20px;
@@ -328,9 +327,9 @@ body {
   text-align: left;
 }
 
-.user-email:after,
-.user-location:after,
-.user-phone:after {
+.user__email:after,
+.user__location:after,
+.user__phone:after {
   content: "";
   position: absolute;
   top: -1px;
@@ -342,19 +341,19 @@ body {
   background-repeat: no-repeat;
 }
 
-.user-location:after {
+.user__location:after {
   background-image: url("../img/location.svg");
   background-size: 16px;
 }
 
-.user-email:after {
+.user__email:after {
   top: 1px;
 
   background-image: url("../img/email.svg");
   background-size: 13px;
 }
 
-.user-phone:after {
+.user__phone:after {
   background-image: url("../img/phone.svg");
   background-size: 13px;
 }
@@ -413,7 +412,7 @@ body {
     height: auto;
     margin: 0;
   }
-  .users-filters--button {
+  .users-filters__button {
     display: none;
   }
   .form {
@@ -428,7 +427,7 @@ body {
   .header {
     height: 90px;
   }
-  .header--title {
+  .header__title {
     font-size: 28px;
     letter-spacing: 2px;
   }
