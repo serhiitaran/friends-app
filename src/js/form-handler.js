@@ -21,10 +21,12 @@ const formHandler = ({ type, target }) => {
   if (type === 'submit') {
     event.preventDefault();
   }
-  state[target.name] = target.value;
+
   if (type === 'reset') {
     resetState();
   }
+
+  state[target.name] = target.value;
   const filtredUsers = filterUsers(originUsers, state);
   const sortedUsers = sortUsers(filtredUsers, state);
   renderUsers(sortedUsers);
